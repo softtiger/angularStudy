@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: eurekaClient
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://www.eurakserver01.com:7001/eureka/
