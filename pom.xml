@@ -10,6 +10,7 @@
     <modules>
         <module>eureka7001</module>
         <module>EurekaClient</module>
+        <module>eureka7002</module>
     </modules>
     <packaging>pom</packaging>
 
