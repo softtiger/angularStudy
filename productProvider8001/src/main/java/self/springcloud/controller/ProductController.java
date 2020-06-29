@@ -2,7 +2,10 @@ package self.springcloud.controller;
 
 import com.infras.RespCode;
 import com.infras.ResultJSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,8 +30,16 @@ public class ProductController {
     @Autowired
     private IProductCategoryServices productCategoryServices;
 
+    private Logger logger = LoggerFactory.getLogger(ProductController.class);
+
+    @Value("${server.port}")
+    private String  serverPort;
+
+
     @GetMapping("/list")
     public ResultJSONObject list() {
+        logger.info("{} 收到请求",serverPort);
+
         ResultJSONObject result = new ResultJSONObject(RespCode.SUCCESS);
 
         List<ProductInfo> productInfoList = productServices.findUpAll();

@@ -1,9 +1,9 @@
-package self.springcloud.domain;
+package person.springcloud.domain;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class orderMaster {
+public class OrderMaster {
     private String orderId;
 
     private String buyerName;
@@ -16,9 +16,9 @@ public class orderMaster {
 
     private BigDecimal orderAmount;
 
-    private Byte orderStatus;
+    private Integer orderStatus;
 
-    private Byte payStatus;
+    private Integer payStatus;
 
     private Date createTime;
 
@@ -72,19 +72,19 @@ public class orderMaster {
         this.orderAmount = orderAmount;
     }
 
-    public Byte getOrderStatus() {
+    public Integer getOrderStatus() {
         return orderStatus;
     }
 
-    public void setOrderStatus(Byte orderStatus) {
+    public void setOrderStatus(Integer orderStatus) {
         this.orderStatus = orderStatus;
     }
 
-    public Byte getPayStatus() {
+    public Integer getPayStatus() {
         return payStatus;
     }
 
-    public void setPayStatus(Byte payStatus) {
+    public void setPayStatus(Integer payStatus) {
         this.payStatus = payStatus;
     }
 

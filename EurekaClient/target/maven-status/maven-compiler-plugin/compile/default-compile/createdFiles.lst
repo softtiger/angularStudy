@@ -1,1 +1,2 @@
-self\springCloud\EurekaClientApplication.class
+person\springcloud\controller\ClientController.class
+person\springcloud\SpringConfiguration.class

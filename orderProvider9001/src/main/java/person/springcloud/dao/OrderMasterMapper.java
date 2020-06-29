@@ -1,17 +1,20 @@
-package self.springcloud.dao;
+package person.springcloud.dao;
 
-import self.springcloud.domain.orderMaster;
 
-public interface orderMasterMapper {
+import org.apache.ibatis.annotations.Mapper;
+import person.springcloud.domain.OrderMaster;
+
+@Mapper
+public interface OrderMasterMapper {
     int deleteByPrimaryKey(String orderId);
 
-    int insert(orderMaster record);
+    int insert(OrderMaster record);
 
-    int insertSelective(orderMaster record);
+    int insertSelective(OrderMaster record);
 
-    orderMaster selectByPrimaryKey(String orderId);
+    OrderMaster selectByPrimaryKey(String orderId);
 
-    int updateByPrimaryKeySelective(orderMaster record);
+    int updateByPrimaryKeySelective(OrderMaster record);
 
-    int updateByPrimaryKey(orderMaster record);
+    int updateByPrimaryKey(OrderMaster record);
 }

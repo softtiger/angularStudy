@@ -1,9 +1,9 @@
-package self.springcloud.domain;
+package person.springcloud.domain;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class orderDetail {
+public class OrderDetail {
     private String detailId;
 
     private String orderId;

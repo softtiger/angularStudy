@@ -1,17 +1,20 @@
-package self.springcloud.dao;
+package person.springcloud.dao;
 
-import self.springcloud.domain.orderDetail;
+import org.apache.ibatis.annotations.Mapper;
+import person.springcloud.domain.OrderDetail;
 
-public interface orderDetailMapper {
+
+@Mapper
+public interface OrderDetailMapper {
     int deleteByPrimaryKey(String detailId);
 
-    int insert(orderDetail record);
+    int insert(OrderDetail record);
 
-    int insertSelective(orderDetail record);
+    int insertSelective(OrderDetail record);
 
-    orderDetail selectByPrimaryKey(String detailId);
+    OrderDetail selectByPrimaryKey(String detailId);
 
-    int updateByPrimaryKeySelective(orderDetail record);
+    int updateByPrimaryKeySelective(OrderDetail record);
 
-    int updateByPrimaryKey(orderDetail record);
+    int updateByPrimaryKey(OrderDetail record);
 }

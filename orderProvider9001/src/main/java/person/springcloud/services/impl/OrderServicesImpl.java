@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-public class IOrderServicesImpl implements IOrderServices {
+public class OrderServicesImpl implements IOrderServices {
 
     @Autowired
     private OrderMasterMapper orderMasterDao;
@@ -28,7 +28,7 @@ public class IOrderServicesImpl implements IOrderServices {
         //订单入库
         orderMaster.setOrderStatus(OrderStatus.NEW.getCode());
         orderMaster.setPayStatus(PayStatus.UNPAID.getCode());
-        orderMaster.setOrderId(UUID.randomUUID().toString());
+        orderMaster.setOrderId(UUID.randomUUID().toString().substring(0,32));
         orderMaster.setOrderAmount(new BigDecimal(5));
         orderMasterDao.insertSelective(orderMaster);
 
