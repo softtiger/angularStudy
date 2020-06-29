@@ -28,6 +28,7 @@
         <module>eureka7002</module>
         <module>common</module>
         <module>productProvider8001</module>
+        <module>productProvider8002</module>
         <module>orderProvider9001</module>
     </modules>
     <packaging>pom</packaging>
