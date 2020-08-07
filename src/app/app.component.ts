@@ -6,14 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hello';
-  area  = '广东';
-  orderStatus = 10;
-  famouse:string[] = ["毛泽东","爱因斯坦","终南山"];
-  toggle(){
-     this.area=='广东'? this.area='湖北':this.area='广东';
-  }
-  sayHi(name,i){
-      alert(name+"排名"+i);
-  }
+   public userName:String ='revokeyu';
+   password:string ="123";
+   login(){
+      alert(this.userName+"登陆成功");
+   }
+   login2(username,password){
+      alert(username);
+   }
 }
