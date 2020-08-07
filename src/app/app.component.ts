@@ -6,16 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = '你好 世界';
-  btnClass = "btnClass";
-  customInfo = "custom";
-  htmlStr = "<span>这是个片段<span>";
-  count:number = 0;
-  inc(){
-     this.count ++;
+  title = 'hello';
+  area  = '广东';
+  orderStatus = 10;
+  famouse:string[] = ["毛泽东","爱因斯坦","终南山"];
+  toggle(){
+     this.area=='广东'? this.area='湖北':this.area='广东';
   }
-  changeColor(event):void{
-      console.log(event);
-      event.srcElement.style.background = 'blue';
+  sayHi(name,i){
+      alert(name+"排名"+i);
   }
 }
